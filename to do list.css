@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Calener_Container {
+    /* background-image: url("owl.jpg"); */
+    /* height: 30vh; */
+    width: 56%;
+    height: 197px;
+    background-repeat: no-repeat;
+    background-color: red;
+    margin: 0px auto;
+    position: relative;
+}
+.Calener_Container  img { 
+    width: 100%; height: 100%;
+}
+.Calener_Container .calender{
+    width: 200px;
+    height: 40px;
+    /* background-color: red; */
+    position: absolute;
+    left: 15px;
+    bottom: 0px;
+    transform: translatey(-29%);
+    color: white;
+}
+
+@media (min-width : 710px ) {
+    .todo-container {
+        width:  60%;
+       /* width: 600px; */
+       margin: 0px auto 0px;
+       background-color: #f6f6f6;
+   }
+}
+
+@media (max-width : 700px ) {
+    .todo-container {
+        width:  85%;
+       
+       margin: 0px auto 0px;
+       background-color: #f6f6f6;
+   }
+   .Calener_Container {
+       width: 80%;
+   }
+}
+
+
+.todo-container  .add-task {
+    padding: 15px;
+    /* background-color: #009688; */
+    background-color: crimson ;
+    position: relative;
+    border-radius: 20px;
+}
+
+.todo-container  .add-task input { 
+    display: inline-block;
+    padding: 10px 15px ;
+    border: none;
+    background-color: rgba(255, 255, 255, .3);
+    width: calc(100% - 15px);
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 20px;
+    /* outline: none; */
+}
+.todo-container  .add-task input:focus {
+    outline: none;
+} 
+
+.todo-container  .add-task .plus {
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    background-color: #FFF; 
+    right: 12px ;
+    border-radius: 50%; 
+    line-height: 43px; 
+    text-align: center;
+    /* color: #009689; */
+    color :darkblue ;
+    cursor: pointer;
+    font-size: 38px;
+    transition: transform .3s;
+} 
+.todo-container  .add-task .plus:hover{
+    transform: rotate(90deg);
+    background-color: black; color: crimson;
+} 
+
+.todo-container .tasks-content {
+    padding: 15px; 
+    border-radius: 50px;
+
+}
+
+.todo-container .tasks-content  .no-tasks-message{
+    color: #777; 
+    font-size: 15px ;
+    border-radius: 20px;
+}
+
+.todo-container .tasks-content  > span {
+    display: block;
+    background-color: #FFF;
+    padding: 10px;
+}
+
+.todo-container .tasks-content  > span:not(:last-child)  {
+margin-bottom: 10px;
+}
+
+.todo-container .tasks-content .task-box .delete {
+    float: right;
+    background-color: #e91e63;
+    padding: 4px 10px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.todo-container .tasks-content .task-box .delete:hover{
+    background-color: black;
+}
+
+.todo-container .tasks-content  .task-box .Check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white; 
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+    left: 8px;
+    top: 4px;
+   
+}
+.todo-container .tasks-content  .task-box .Check.Checked{
+    background-color: crimson;
+
+}
+
+.todo-container .tasks-content  .task-box .Check.Checked + span  {
+    text-decoration: line-through;
+}
+
+.todo-container .tasks-content  .task-box.finished {
+    text-decoration: line-through;
+}
+@media (min-width : 801px ) {
+    .task-stats {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* align-items: center; */
+        overflow: hidden;
+        margin: 10px auto ;
+        font-size: 12px;
+        width: 70%;
+        /* background-color: red; */
+    }
+}
+    @media (max-width : 800px ) {
+        .task-stats {
+
+            display: flex;
+            flex-direction: row;
+            width: 85%;
+            gap: 3px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            overflow: hidden;
+            margin: 10px auto ;
+            font-size: 5px;
+            /* background-color: red; */
+        
+        }
+        .task-stats .tasks-count {
+            padding: 5px;
+            width: 200px; height: 50px;
+            font-size: 16px;
+            /* background-color: blue; */
+            /* margin-left: 34px; */
+           
+        }
+        .task-stats .tasks-completed {
+            padding: 5px;
+            width: 200px; height: 50px;
+            font-size: 16px;
+            /* background-color: blue; */
+        }
+    
+   .task-stats .Delete_All  ,
+ .task-stats .Clear_Chicked 
+{
+    background-color: black;
+    color: crimson;
+    border-radius: 8px;
+    border: 1px solid blue;
+    text-align: center;
+    font-size: 12px;
+    margin: 2px ;
+}
+
+.tasks-count span {
+    margin-left: 34px;
+}
+    }
+
+
+.task-stats  div {}
+
+.task-stats .tasks-count {
+    padding: 10px;
+    /* margin-left: 50px; */
+}
+.task-stats .tasks-completed {
+    padding: 10px;
+}
+
+
+.task-stats .Delete_All:hover  ,
+ .task-stats .Clear_Chicked:hover {
+ background-color: yellowgreen;
+ }
+.task-stats .Delete_All  ,
+ .task-stats .Clear_Chicked 
+{
+    /* flex-basis: 30%; */
+    width: 200px; height: 30px;
+    background-color: black;
+    color: crimson;
+    border-radius: 8px;
+    border: 1px solid blue;
+    text-align: center;
+    
+    margin: 2px ;
+    display: flex; justify-content: center; align-items: center;
+    cursor: pointer;
+}
+.task-stats .Clear_Chicked  {
+    color: white;
+}
+
+/* .Delete_All
+.Clear_Chicked */
+
+.task-stats .tasks-count span ,
+.task-stats .tasks-completed  span{
+color: #FFF;
+padding: 1px 5px ;
+font-size: 14px;
+border-radius: 4px;
+font-weight: bold;
+width: 200px; height: 30px;
+
+}
+
+.task-stats .tasks-count span {
+background-color: #e91e63;
+}
+
+.task-stats .tasks-completed  span{
+    background-color: #03a9f4;
+}
+
+.todo-container  .tasks-content  .task-box  .Check:hover {
+    background-color: yellowgreen ;
+}
+
